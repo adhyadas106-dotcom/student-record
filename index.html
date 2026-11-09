@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Record Management System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-indigo-100 min-h-screen p-8">
+    <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl p-8">
+        <h1 class="text-4xl font-bold text-center text-indigo-900 mb-8">
+            Student Management System
+        </h1>
+
+        <!--input sectn -->
+        <form onsubmit="event.preventDefault(); addStudent();" class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+            <input id="studentIdInput" type="text"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-3" placeholder="Student ID">
+            <input id="nameInput"  type="text"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-3" placeholder="Full Name">
+            <input id="courseInput" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-3" placeholder="Course">
+            <!-- buttn -->
+
+            <button style="background-color: rgb(111, 221, 246);" onclick="addStudent()" type="button"  text-white font-bold rounded-lg p-3 transition"> Add Student
+           
+            </button>
+        </form>
+
+
+        <!-- studnt recrd table -->
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+
+                <thead>
+
+                    <tr class="bg-indigo-600 text-white">
+                        <th class="p-3">Student ID</th>
+                        <th class="p-3">Name</th>
+                        <th class="p-3">Course</th>
+                        <th class="p-3 text-center">Actions</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="studentList">
+                    <!-- studnt row insrt -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
